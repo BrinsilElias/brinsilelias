@@ -532,15 +532,6 @@ input::placeholder {
   color: #D1D5DB;
 }
 
-.spline-3d {
-  margin-top: 1.875rem;
-  height: 380px;
-  background-color: var(--clr-background-300);
-}
-
-iframe {
-  border-radius: 1rem;
-}
 
 /* Bio */
 .bio h2 {
