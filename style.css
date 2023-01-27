@@ -119,9 +119,8 @@ button {
 }
 
 .gb-6 {
-  background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+  background-image: linear-gradient(to right, hsl(223, 100%, 98.6%), hsl(330, 100%, 98.4%));
 }
-
 
 
 /* ================
@@ -257,11 +256,32 @@ h2 span {
 }
 
 .bio__data {
+  position: relative;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px var(--clr-background-300) solid;
-  padding-bottom: 1rem;
+  padding: 0.8rem 1rem;
   margin-bottom: 1.25rem;
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+
+.bio__data::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to right, hsla(223, 84%, 93%, 0.5), rgba(246, 220, 233, 0.5));
+  border-radius: 0.5rem;
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+
+.bio__data:hover::before {
+  opacity: 1;
 }
 
 .bio__data-content {
